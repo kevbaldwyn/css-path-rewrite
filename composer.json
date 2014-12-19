@@ -1,6 +1,7 @@
 {
     "name": "kevbaldwyn/css-path-rewrite",
     "description": "Rewrite paths in css files, includes a filter for Assetic",
+    "keywords": [ "assets", "compression", "minification", "assetic", "css", "rewrite" ],
     "authors": [
         {
             "name": "Kevin Baldwyn",
