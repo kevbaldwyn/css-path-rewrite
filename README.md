@@ -1,7 +1,7 @@
 css-path-rewrite
 ================
 
-Rewrite paths in css files to things like images from local to remote (or anything else). Currently only handles "root relative" url paths, ie urls that start with `/`. 
+Rewrite paths in css files to things like images from local to remote (or anything else). Currently only handles "root relative" url paths, ie urls that start with `/`.
 
 ##Installation
 With Composer
@@ -14,7 +14,7 @@ With Composer
 
 Composer Update:
 
-    $ composer update kevbaldwyn/newrelic-fuel
+    $ composer update kevbaldwyn/css-path-rewrite
 
 ##Usage
 To simply rewrite urls in a css file:
