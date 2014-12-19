@@ -1,7 +1,6 @@
 <?php  namespace KevBaldwyn\Tests\CssPathRewrite;
 
 use \PHPUnit_Framework_TestCase;
-use \Mockery as m;
 use KevBaldwyn\CssPathRewrite\Rewriter;
 
 class RewriterTest extends PHPUnit_Framework_TestCase {
