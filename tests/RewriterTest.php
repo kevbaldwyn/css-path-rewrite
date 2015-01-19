@@ -5,7 +5,7 @@ use KevBaldwyn\CssPathRewrite\Rewriter;
 
 class RewriterTest extends PHPUnit_Framework_TestCase {
 
-    private $target = 'http://wwww.example.com/';
+    private $target = 'http://www.example.com/';
 
     public function testRewriteUrlWithoutQuotes()
     {
@@ -22,6 +22,17 @@ class RewriterTest extends PHPUnit_Framework_TestCase {
     {
         $input = 'background-image: url("/path/to/image.jpg");';
         $expected = 'background-image: url("' . $this->target . 'path/to/image.jpg");';
+
+        $writer = new Rewriter($input, $this->target);
+        $output = $writer->rewrite();
+
+        $this->assertSame($expected, $output);
+    }
+
+    public function testIgnoreExistingFQDN()
+    {
+        $input = 'background: url(http://www.example.com/path/to/image.jpg) no-repeat centre centre;';
+        $expected = 'background: url(' . $this->target . 'path/to/image.jpg) no-repeat centre centre;';
 
         $writer = new Rewriter($input, $this->target);
         $output = $writer->rewrite();

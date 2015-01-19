@@ -26,6 +26,8 @@ class Rewriter {
                 return str_replace($matches['url'], $target.$matches['url'], $matches[0]);
             }
 
+            return $matches[0];
+
         });
     }
 
